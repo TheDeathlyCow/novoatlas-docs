@@ -4,10 +4,6 @@ icon: lucide/rocket
 
 # Getting Started
 
-## Examples
-
-The Example Datapacks are builtin with NovoAtlas and can be selected on world creation. You can also download them separately from the [GitHub releases page](https://github.com/TheDeathlyCow/novoatlas/releases). 
-
 ## How to Create a NovoAtlas Dimension
 
 1. Create or find a grayscale image height map in one of the supported formats[^1]. You may either use 8-bit RGB or 16-bit grayscale, if your image format supports it. To create maps, I would highly recommend using [WorldPainter](https://www.worldpainter.net/), as it is purpose-built for Minecraft map making and has an option to export a height map. You can also get heightmaps of Earth from a variety of websites, here's a few that I've found (though not tested with NovoAtlas):
@@ -19,7 +15,11 @@ The Example Datapacks are builtin with NovoAtlas and can be selected on world cr
 
 ---
 
-[^1]: Supported formats include: `.jpg`, `.tif`, `.tiff`, `.wbp`, `.bmp`, `.gif`, `.png`, `.jpeg`, `.wbmp`, and `.webp`. Some of these formats support lossy compression, however I strongly recommend against utilising this feature, especially for biome maps. Using lossy compression will result in loss of detail and incorrect biome placement (particularly around biome boundaries).
+[^1]: Supported formats include: `.png`, `.jpg`,`.jpeg`,  `.tif`, `.tiff`, `.wbp`, `.bmp`, `.gif`, `.wbmp`, and `.webp`. Some of these formats support lossy compression, however I strongly recommend against utilising this feature, especially for biome maps. Using lossy compression will result in loss of detail and incorrect biome placement (particularly around biome boundaries).
+
+## Examples
+
+The Example Datapacks are builtin with NovoAtlas and can be selected on world creation. You can also download them separately from the [GitHub releases page](https://github.com/TheDeathlyCow/novoatlas/releases). 
 
 ## Modifying a NovoAtlas Dimension
 

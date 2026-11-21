@@ -18,6 +18,7 @@ nav = [
   "getting-started.md",
   { "Formats (v1)" = [
     "formats/v1/map-info.md",
+    "formats/v1/images.md",
     "formats/v1/chunk-generators.md",
     "formats/v1/biome-sources.md",
     "formats/v1/density-functions.md",
