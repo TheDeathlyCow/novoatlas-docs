@@ -55,6 +55,8 @@ This is the central registry of NovoAtlas. It is responsible for managing all th
 
 NovoAtlas provides a registry for interpolation types. Third-party mods can register new codecs to this registry to provide new values, however NovoAtlas provides a few built in. You may choose any one of the following types:
 
+From my testing, the nearest neighbor works well for horizontal scales from 0-1, bilinear works well for scales from 1-2, bicubic works well for scales 2-5, and lanczos works well for scales over 5 (depending on the window size). However, bicubic and lanczos can require more CPU power to run, lanczos in particular will be quite slow with large window sizes.
+
 - `{}` **horizontal_scale**: The root tag.
     - `"` **interpolation**: If `novoatlas:nearest_neighbor` or `minecraft:nearest_neighbor` or `nearest_neighbor`, will use a simple blocky interpolation. This is the default strategy. Has no additional fields.
 
