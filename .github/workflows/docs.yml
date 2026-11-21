@@ -34,3 +34,14 @@ jobs:
           else
             mike deploy --push "${GITHUB_REF_NAME#release/}"
           fi
+      - name: Ensure CNAME
+        run: |
+          git fetch origin gh-pages
+          git worktree add /tmp/ghp gh-pages
+          cd /tmp/ghp
+          if [ ! -f CNAME ]; then
+            echo "novoatlas.thedeathlycow.com" > CNAME
+            git add CNAME
+            git commit -m "Add CNAME"
+            git push origin gh-pages
+          fi
