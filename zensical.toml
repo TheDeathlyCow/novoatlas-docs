@@ -7,8 +7,7 @@ site_description = "Documentation for NovoAtlas"
 # copyright = "Copyright &copy; 2026 Your name"
 
 repo_url = "https://github.com/TheDeathlyCow/novoatlas"
-repo_name = "TheDeathlyCow/novoatlas-docs"
-edit_uri = "edit/main/docs/"
+repo_name = "TheDeathlyCow/novoatlas"
 
 nav = [
   { "Get started" = "index.md" },
