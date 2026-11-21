@@ -31,7 +31,7 @@ nav = [
 [project.theme]
 # variant = "classic"
 # custom_dir = "overrides"
-# favicon = "images/favicon.png"
+favicon = "assets/logo.png"
 language = "en"
 features = [
   "announce.dismiss",
