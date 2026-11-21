@@ -6,6 +6,8 @@ icon: lucide/box
 
 These are additional types of [density functions](https://minecraft.wiki/w/Density_function) supplied by NovoAtlas. These can be used in any `density_function` registry entry or in-line where density functions are required in other things like noise routers.
 
+For most users, you should never need to worry about these when using NovoAtlas. The mod automatically applies them to your chunk generators (which is why some of the formats are a bit messy for normal datapack development).
+
 ## Heightmap
 
 Using a heightmap in a [map info](./map-info.md), computes positive density below the surface and negative density above the surface, with some blending in between.
