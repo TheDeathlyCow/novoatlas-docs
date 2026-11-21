@@ -5,7 +5,7 @@ site_description = "Documentation for NovoAtlas"
 copyright = """
 NOT AN OFFICIAL MINECRAFT WEBSITE. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.
 <br/>
-&copy; 2026 - TheDeathlyCow. 
+&copy; 2026 - TheDeathlyCow.
 <br/>
 All content on this website is licensed under <a href="https://github.com/TheDeathlyCow/novoatlas-docs/blob/latest/LICENSE"> CC-BY-NC-SA 4.0</a> unless otherwise noted.
 """
@@ -62,14 +62,7 @@ features = [
   # "toc.integrate",
 ]
 
-# logo = "assets/logo.png"
-
-# [project.theme.icon]
-# logo = "lucide/smile"
-
-# [project.theme.font]
-# text = "Inter"
-# code = "Jetbrains Mono"
+logo = "assets/logo.png"
 
 [[project.theme.palette]]
 media = "(prefers-color-scheme)"
