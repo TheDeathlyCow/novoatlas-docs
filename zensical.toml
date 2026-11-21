@@ -1,7 +1,7 @@
 [project]
-site_url = "https://www.example.com/"
+site_url = "https://novoatlas.thedeathlycow.com/"
 site_name = "NovoAtlas Documentation"
-# site_description = "Your project description"
+site_description = "Documentation for NovoAtlas"
 # site_author = "Your name"
 
 # copyright = "Copyright &copy; 2026 Your name"
