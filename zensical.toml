@@ -2,7 +2,7 @@
 site_url = "https://novoatlas.thedeathlycow.com/"
 site_name = "NovoAtlas Documentation"
 site_description = "Documentation for NovoAtlas"
-copyright = "Copyright &copy; 2026 TheDeathlyCow <a href=\"https://github.com/TheDeathlyCow/novoatlas-docs/blob/main/LICENSE)\">CC-BY-SA-4.0</a>"
+copyright = "Copyright &copy; 2026 TheDeathlyCow <a href=\"https://github.com/TheDeathlyCow/novoatlas-docs/blob/main/LICENSE\">CC-BY-SA-4.0</a>"
 # site_author = "Your name"
 
 repo_url = "https://github.com/TheDeathlyCow/novoatlas"
