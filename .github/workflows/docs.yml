@@ -2,28 +2,35 @@ name: Documentation
 on:
   push:
     branches:
-      - master
-      - main
+      - latest
+      - "release/**"
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
+concurrency:
+  group: docs-deploy
+  cancel-in-progress: false
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/configure-pages@v6
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v6
         with:
           python-version: 3.x
-      - run: pip install zensical
-      - run: zensical build --clean
-      - uses: actions/upload-pages-artifact@v5
-        with:
-          path: site
-      - uses: actions/deploy-pages@v5
-        id: deployment
+      - run: pip install zensical git+https://github.com/squidfunk/mike.git
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Deploy
+        env:
+          LATEST_VERSION: "26.3"
+        run: |
+          if [ "$GITHUB_REF_NAME" = "latest" ]; then
+            mike deploy --push --update-aliases "$LATEST_VERSION" latest
+            mike set-default --push latest
+          else
+            mike deploy --push "${GITHUB_REF_NAME#release/}"
+          fi

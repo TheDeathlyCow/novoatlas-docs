@@ -2,15 +2,26 @@
 site_url = "https://novoatlas.thedeathlycow.com/"
 site_name = "NovoAtlas Documentation"
 site_description = "Documentation for NovoAtlas"
-copyright = "Copyright &copy; 2026 TheDeathlyCow <a href=\"https://github.com/TheDeathlyCow/novoatlas-docs/blob/main/LICENSE\">CC-BY-SA-4.0</a>"
-# site_author = "Your name"
+copyright = """
+NOT AN OFFICIAL MINECRAFT WEBSITE. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.
+<br/>
+&copy; 2026 - TheDeathlyCow. 
+<br/>
+All content on this website is licensed under <a href="https://github.com/TheDeathlyCow/novoatlas-docs/blob/latest/LICENSE"> CC-BY-NC-SA 4.0</a> unless otherwise noted.
+"""
 
-repo_url = "https://github.com/TheDeathlyCow/novoatlas"
+repo_url = "https://github.com/TheDeathlyCow/novoatlas/"
 repo_name = "TheDeathlyCow/novoatlas"
 
 nav = [
-  { "Get started" = "index.md" },
-  { "Markdown in 5min" = "markdown.md" },
+  "index.md",
+  "getting-started.md",
+  { "Formats (v1)" = [
+    "formats/v1/map-info.md",
+    "formats/v1/chunk-generators.md",
+    "formats/v1/biome-sources.md",
+    "formats/v1/density-functions.md",
+  ]}
 ]
 
 # extra_css = ["stylesheets/extra.css"]
@@ -76,13 +87,17 @@ scheme = "slate"
 toggle.icon = "lucide/moon"
 toggle.name = "Switch to system preference"
 
-# [[project.extra.social]]
-# icon = "fontawesome/brands/github"
-# link = "https://github.com/user/repo"
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/TheDeathlyCow/novoatlas-docs/"
 
-# [[project.extra.social]]
-# icon = "fontawesome/brands/mastodon"
-# link = "https://fosstodon.org/@user"
+[[project.extra.social]]
+icon = "fontawesome/brands/discord"
+link = "https://discord.thedeathlycow.com/"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/bluesky"
+link = "https://bsky.app/profile/thedeathlycow.bsky.social"
 
 [project.markdown_extensions]
 abbr = {}
@@ -114,3 +129,11 @@ pymdownx.tabbed.alternate_style = true
 pymdownx.tabbed.combine_header_slug = true
 pymdownx.tasklist.custom_checkbox = true
 pymdownx.tilde = {}
+
+[project.extra.version]
+provider = "mike"
+default = ["latest"]
+
+[project.plugins.mike]
+version_selector = true
+alias_type = "copy"

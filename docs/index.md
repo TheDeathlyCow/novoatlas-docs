@@ -1,174 +1,81 @@
 ---
-icon: lucide/rocket
+icon: lucide/earth
 ---
 
-# Get started
+# NovoAtlas
 
-For full documentation visit [zensical.org](https://zensical.org/docs/).
+Welcome to the NovoAtlas wiki! NovoAtlas is a prescribed Minecraft world generator, based on the original [Atlas](https://github.com/itsmiir/atlas) mod by itsmiir. This mod allows you to paint a world's height map and biome map, and then import that to a datapack and allow the Minecraft world generator to fill in the rest of the details! 
 
-## Commands
+!!! tip
+    All information on this wiki is for the latest version of Minecraft by default. If you are on an older version, please select it at the top of the screen to get information for your specific version.
 
-* [`zensical new`][new] - Create a new project
-* [`zensical serve`][serve] - Start local web server
-* [`zensical build`][build] - Build your site
+## Player Support
 
-  [new]: https://zensical.org/docs/usage/new/
-  [serve]: https://zensical.org/docs/usage/preview/
-  [build]: https://zensical.org/docs/usage/build/
+If you're having trouble with the mod, you can join [my Discord](https://discord.thedeathlycow.com) and make a post in the `#help-and-support` forum. For help with the _original_ Atlas mod, join [itmiir's Discord](https://discord.gg/6p27K23zSa).
 
-## Examples
+## Minecraft Version Support
 
-### Admonitions
+Currently, NovoAtlas only supports the latest version of Minecraft that the mod has released on. Ports to newer versions will be made as quickly as possible, but know that I am just one person and will not always have time to do this immediately. If you are looking for this mod on 1.19 and 1.20, you can get them from the original Atlas mod at: https://modrinth.com/mod/atlas
 
-> Go to [documentation](https://zensical.org/docs/authoring/admonitions/)
+Quick version support reference:
 
-!!! note
+| Minecraft Version | Support Status                                         |
+| ----------------- | ------------------------------------------------------ |
+| 26.3.x            | :white_check_mark: Supported                           |
+| 26.2.x            | :warning: Available                                    |
+| 26.1.x            | :warning: Available                                    |
+| 1.21.11           | :warning: Available                                    |
+| 1.21.9-10         | :warning: Available                                    |
+| 1.21.6-8          | :warning: Available                                    |
+| 1.21.5            | :warning: Available                                    |
+| 1.21.4            | :warning: Available                                    |
+| 1.21.2-3          | :warning: Available (Fabric only)                      |
+| 1.21.1            | :warning: Available                                    |
+| 1.20.5-6          | :x: Unsupported                                        |
+| 1.20.3-4          | :x: Unsupported                                        |
+| 1.20.2            | :x: Unsupported                                        |
+| 1.20-1.20.1       | :warning: Available[^1]                                |
+| 1.19.4            | :x: Unsupported                                        |
+| 1.19.3            | :warning: Available (Original Atlas Mod only)          |
+| 1.19-1.19.2       | :warning: Available (Original Atlas Mod only)          |
+| 1.18.x and older  | :x: Unsupported                                        |
 
-    This is a **note** admonition. Use it to provide helpful information.
+---
 
-!!! warning
+[^1]: I do not have time or capacity to develop new features or fix issues for 1.20.1 myself; this version is only supported by community contribution. If you want a feature or fix backported, please submit a PR on GitHub (or create a fork). You can also get 1.20.1 versions of the original Atlas mod.
 
-    This is a **warning** admonition. Be careful!
+# Notices 
 
-### Details
+This section contains notices and credits for libraries used by NovoAtlas.
 
-> Go to [documentation](https://zensical.org/docs/authoring/admonitions/#collapsible-blocks)
+## TwelveMonkeys ImageIO
 
-??? info "Click to expand for more info"
+BSD 3-Clause License
 
-    This content is hidden until you click to expand it.
-    Great for FAQs or long explanations.
+Copyright (c) 2008-2020, Harald Kuhr
+All rights reserved.
 
-## Code Blocks
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-> Go to [documentation](https://zensical.org/docs/authoring/code-blocks/)
+* Redistributions of source code must retain the above copyright notice, this
+  list of conditions and the following disclaimer.
 
-``` python hl_lines="2" title="Code blocks"
-def greet(name):
-    print(f"Hello, {name}!")  # (1)!
+* Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
 
+* Neither the name of the copyright holder nor the names of its
+  contributors may be used to endorse or promote products derived from
+  this software without specific prior written permission.
 
-greet("Python")
-```
-
-1.  > Go to [documentation](https://zensical.org/docs/authoring/code-blocks/#code-annotations)
-
-    Code annotations allow to attach notes to lines of code.
-
-Code can also be highlighted inline: `#!python print("Hello, Python!")`.
-
-## Content tabs
-
-> Go to [documentation](https://zensical.org/docs/authoring/content-tabs/)
-
-=== "Python"
-
-    ``` python
-    print("Hello from Python!")
-    ```
-
-=== "Rust"
-
-    ``` rs
-    println!("Hello from Rust!");
-    ```
-
-## Diagrams
-
-> Go to [documentation](https://zensical.org/docs/authoring/diagrams/)
-
-``` mermaid
-graph LR
-  A[Start] --> B{Error?};
-  B -->|Yes| C[Hmm...];
-  C --> D[Debug];
-  D --> B;
-  B ---->|No| E[Yay!];
-```
-
-## Footnotes
-
-> Go to [documentation](https://zensical.org/docs/authoring/footnotes/)
-
-Here's a sentence with a footnote.[^1]
-
-Hover it, to see a tooltip.
-
-[^1]: This is the footnote.
-
-
-## Formatting
-
-> Go to [documentation](https://zensical.org/docs/authoring/formatting/)
-
-- ==This was marked (highlight)==
-- ^^This was inserted (underline)^^
-- ~~This was deleted (strikethrough)~~
-- H~2~O
-- A^T^A
-- ++ctrl+alt+del++
-
-## Icons, Emojis
-
-> Go to [documentation](https://zensical.org/docs/authoring/icons-emojis/)
-
-* :sparkles: `:sparkles:`
-* :rocket: `:rocket:`
-* :tada: `:tada:`
-* :memo: `:memo:`
-* :eyes: `:eyes:`
-
-## Maths
-
-> Go to [documentation](https://zensical.org/docs/authoring/math/)
-
-$$
-\cos x=\sum_{k=0}^{\infty}\frac{(-1)^k}{(2k)!}x^{2k}
-$$
-
-!!! warning "Needs configuration"
-    Note that MathJax is included via a `script` tag on this page and is not
-    configured in the generated default configuration to avoid including it
-    in a pages that do not need it. See the documentation for details on how
-    to configure it on all your pages if they are more Maths-heavy than these
-    simple starter pages.
-
-<script id="MathJax-script" src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [["\\(", "\\)"]],
-      displayMath: [["\\[", "\\]"]],
-      processEscapes: true,
-      processEnvironments: true
-    },
-    options: {
-      ignoreHtmlClass: ".*|",
-      processHtmlClass: "arithmatex"
-    }
-  };
-
-  document$.subscribe(() => {
-    MathJax.startup.output.clearCache()
-    MathJax.typesetClear()
-    MathJax.texReset()
-    MathJax.typesetPromise()
-  })
-</script>
-
-## Task Lists
-
-> Go to [documentation](https://zensical.org/docs/authoring/lists/#using-task-lists)
-
-* [x] Install Zensical
-* [x] Configure `zensical.toml`
-* [x] Write amazing documentation
-* [ ] Deploy anywhere
-
-## Tooltips
-
-> Go to [documentation](https://zensical.org/docs/authoring/tooltips/)
-
-[Hover me][example]
-
-  [example]: https://example.com "I'm a tooltip!"
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
