@@ -42,26 +42,11 @@ Does the exact same thing like as [Get Height From Map](#get-height-from-map), b
 !!! warning
     This object is considered experimental, meaning its format could change in future updates. As such, it uses the namespace `novoatlas-experimental`!
 
-This density function is used to blend two other density functions together based on the boundaries of a map. It is intended to be used as the final density for blend-to-random generation. Around the boundary of the map, it will blend the edge of the map to the random density by using a blended preliminary height value to generate densities similar to [`novoatlas:height_map`](#heightmap).
+This density function is used to blend two other density functions together based on the boundaries of a map. It is intended to be used as the final density for blend-to-random generation. Around the boundary of the map, it will blend the raw density values together using a smoothstep function.
 
 - `{}`: The parent tag.
     - `"` **type**: Must be set to `novoatlas-experimental:blend_at_map_border` for this density function to apply. 
     - `"` **map_info**: A resource location of the [map info](./map-info.md) object to use to determine the boundaries of the map.
     - `"` `{}` **inside_map**: The density function to use when generating inside the map. This should supply the final density for blocks inside the map.
     - `"` `{}` **outside_map**: The density function to use when generating outside the map. This should supply the final density for blocks outside the map.
-    - `"` `{}` **preliminary_height**: A density function that gives the blended preliminary height values between the **outside_map** and **outside_map** density functions. This should always be done with [`novoatlas:blend_surface_level`](#blend-surface-level). This function type will add `8` to the output of this function.
-    - `F32` **blend_distance**: An 32-bit float. Must be greater than `0`. How far, in blocks, to blend the two inside/out map functions using the preliminary surface level.
-
-## Blend Surface Level
-
-!!! warning
-    This object is considered experimental, meaning its format could change in future updates. As such, it uses the namespace `novoatlas-experimental`!
-
-This density function will use smoothstep to blend together the outputs of two other density functions based on the boundaries of a map.
-
-- `{}`: The parent tag.
-    - `"` **type**: Must be set to `novoatlas-experimental:blend_surface_level` for this density function to apply. 
-    - `"` **map_info**: A resource location of the [map info](./map-info.md) object to use to determine the boundaries of the map.
-    - `"` `{}` **inside_map**: The density function to use when generating inside the map. This should supply the preliminary height values for blocks inside the map.
-    - `"` `{}` **outside_map**: The density function to use when generating outside the map. This should supply the preliminary height values for blocks outside the map.
     - `F32` **blend_distance**: An 32-bit float. Must be greater than `0`. How far, in blocks, to blend the two inside/out map functions using the preliminary surface level.

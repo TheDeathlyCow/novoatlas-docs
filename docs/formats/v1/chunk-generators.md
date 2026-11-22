@@ -36,7 +36,7 @@ This works similarly to [`novoatlas:image_map`](#image-map), except that outside
     - `"` **underground_density_function**: A resource location of a [density function](https://minecraft.wiki/w/Density_function) to use. Can be any density function, but using one of `novoatlas:caves` or `novoatlas:no_caves` is recommended. 
     - `{}` **biome_source**: The biome source to use. Can be any biome source, but using the [color map biome source](./biome-sources.md) is highly recommended.
     - `T/F` **enable_carvers**: Optional boolean, defaults to `true`. A simple toggle for whether to disable *all* [carvers](https://minecraft.wiki/w/Cave#Carver_caves) (the old type of caves).
-    - `F32` **blend_distance**: Optional 32-bit float, defaults to `256.0`. Must be greater than `0`. This is the distance over which the blending will apply in blocks. 
+    - `F32` **blend_distance**: Optional 32-bit float, defaults to `64.0`. Must be greater than `0`. This is the distance over which the blending will apply in blocks. 
 
 ## Examples
 

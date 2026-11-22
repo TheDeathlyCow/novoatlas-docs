@@ -29,8 +29,6 @@ This biome source works like [biome cell source](#biome-cell-color-map), except 
     - `"` **map_info**: A resource location of the map info object to use.
     - `"` **default_biome**: The biome to use for unmapped colors.
     - `{}` **outside_map**: Another biome source, either a NovoAtlas biome source or a vanilla one, to be used outside the bounds of the map.
-    - `F32` **blend_distance**: A 32-bit float. Must be greater than `0`. How far, in biome cells, to apply blending between the inside and outside map.
-    - `"` `{}` **normal_noise**: Optional [noise function](https://minecraft.wiki/w/Noise) applied to the blending. Defaults to being equivalent to `minecraft:offset`. 
 
 ### Color Map
 !!! warning
@@ -42,7 +40,6 @@ This biome source maps each pixel of your biome map images to a single block. Th
     - `"` **type**: Must be set to `novoatlas:color_map` for this biome source to apply.
     - `"` **map_info**: A resource location of the map info object to use.
     - `"` **default_biome**: The biome to use for unmapped colors.
-
 
 ## Examples
 
