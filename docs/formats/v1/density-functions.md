@@ -32,7 +32,7 @@ Returns the raw height value from a heightmap in a [map info](./map-info.md).
 Does the exact same thing like as [Get Height From Map](#get-height-from-map), but subtracts the height value by `8` to allow it to be used as a preliminary height in the noise router.
 
 - `{}`: The parent tag.
-    - `"` **type**: Must be set to `novoatlas:get_height_from_map` for this density function to apply. 
+    - `"` **type**: Must be set to `novoatlas:get_preliminary_height_from_map` for this density function to apply. 
     - `"` **map_info**: A resource location of the [map info](./map-info.md) object to use for the heightmap data. 
     - `F32` **lower_bound**: A 32 bit float between -2032 and 2031 (inclusive). Clamps the minimum height to this value.
     - `F32` **upper_bound**: A 32 bit float between -2032 and 2031 (inclusive). Clamps the maximum height to this value.
