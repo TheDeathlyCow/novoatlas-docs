@@ -86,12 +86,24 @@ icon = "fontawesome/brands/github"
 link = "https://github.com/TheDeathlyCow/novoatlas-docs/"
 
 [[project.extra.social]]
+icon = "simple/modrinth"
+link = "https://modrinth.com/mod/novoatlas/"
+
+[[project.extra.social]]
+icon = "simple/curseforge"
+link = "https://www.curseforge.com/minecraft/mc-mods/novoatlas/"
+
+[[project.extra.social]]
 icon = "fontawesome/brands/discord"
 link = "https://discord.thedeathlycow.com/"
 
 [[project.extra.social]]
 icon = "fontawesome/brands/bluesky"
 link = "https://bsky.app/profile/thedeathlycow.bsky.social"
+
+[[project.extra.social]]
+icon = "lucide/globe"
+link = "https://www.thedeathlycow.com/novoatlas/"
 
 [project.markdown_extensions]
 abbr = {}
