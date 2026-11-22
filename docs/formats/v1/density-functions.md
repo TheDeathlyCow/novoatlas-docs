@@ -29,10 +29,10 @@ Returns the raw height value from a heightmap in a [map info](./map-info.md).
 
 ## Get Preliminary Height From Map
 
-Does the exact same thing like as [Get Height From Map](#get-height-from-map), but subtracts the height value by `8` to allow it to be used as a preliminary height in the noise router.
+Does the exact same thing like as [Get Height From Map](#get-height-from-map), but subtracts the height value by `8` to allow it to be used as a preliminary height in the noise router (called `initial_density_without_jaggedness` in this version).
 
 - `{}`: The parent tag.
-    - `"` **type**: Must be set to `novoatlas:get_height_from_map` for this density function to apply. 
+    - `"` **type**: Must be set to `novoatlas:get_preliminary_height_from_map` for this density function to apply. 
     - `"` **map_info**: A resource location of the [map info](./map-info.md) object to use for the heightmap data. 
     - `F32` **lower_bound**: A 32 bit float between -2032 and 2031 (inclusive). Clamps the minimum height to this value.
     - `F32` **upper_bound**: A 32 bit float between -2032 and 2031 (inclusive). Clamps the maximum height to this value.
@@ -50,3 +50,15 @@ This density function is used to blend two other density functions together base
     - `"` `{}` **inside_map**: The density function to use when generating inside the map. This should supply the final density for blocks inside the map.
     - `"` `{}` **outside_map**: The density function to use when generating outside the map. This should supply the final density for blocks outside the map.
     - `F32` **blend_distance**: An 32-bit float. Must be greater than `0`. How far, in blocks, to blend the two inside/out map functions using the preliminary surface level.
+
+## Initial Density Heightmap
+
+!!! warning
+    This generator is deprecated, and has been replaced by the [`novoatlas:get_preliminary_height_from_map`](#get-preliminary-height-from-map) function for modern versions.
+
+This generator works similarly to [`novoatlas:heightmap`](#heightmap), but provides densities for `initial_density_without_jaggedness` by subtracting 8 blocks from the sampled height.
+
+- `{}`: The parent tag.
+    - `"` **type**: Must be set to `novoatlas:initial_density_heightmap` for this density function to apply. 
+    - `"` **map_info**: A resource location of the [map info](./map-info.md) object to use for the heightmap data. 
+    - `F32` **transition_range**: Optional 32 bit float, defaults to `10`. Specifies how wide the density values should interpolate above/below the surface.
